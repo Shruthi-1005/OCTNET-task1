@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelHive: Hyderabad to Delhi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .contact-info {
+            margin-top: 30px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .form-container {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .form-container input[type="text"], 
+        .form-container input[type="email"], 
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to TravelHive: Hyderabad to Delhi</h1>
+        <p>Embark on a journey from the historic city of Hyderabad to the bustling capital of India, Delhi. Experience the rich cultural tapestry, vibrant landscapes, and diverse culinary delights as you traverse through the heart of India.</p>
+        
+        <h2>Why Choose Us?</h2>
+        <p>1. Convenience<br>2. Comfort<br>3. Affordability<br>4. Safety</p>
+        
+        <h2>Your Itinerary</h2>
+        <p>Departure: Hyderabad Rajiv Gandhi International Airport (HYD)<br>Arrival: Indira Gandhi International Airport (DEL)</p>
+        <p>Flight Options: Choose from a variety of direct and connecting flights operated by leading airlines.<br>Duration: Approximate flight duration is around 2 hours and 30 minutes for direct flights.</p>
+        
+        <h2>Explore Delhi</h2>
+        <p>Once you arrive in Delhi, immerse yourself in its rich history and vibrant culture. Visit iconic landmarks such as the Red Fort, Qutub Minar, and India Gate.</p>
+        
+        <a href="#" class="button" id="bookButton">Book Your Journey</a>
+        
+        <div class="contact-info">
+            <p>Have any questions or need assistance? Contact us:</p>
+            <p>Phone: 1-800-TRAVELHIVE<br>Email: info@travelhive.com</p>
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+
+        <div class="form-container" id="bookingForm">
+            <h2>Book Your Journey</h2>
+            <form id="bookingForm">
+                <input type="text" id="name" placeholder="Your Name" required><br>
+                <input type="email" id="email" placeholder="Your Email" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('bookButton').addEventListener('click', function() {
+            document.getElementById('bookingForm').style.display = 'block';
+        });
+
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you can add code to handle form submission, like sending data to a server.
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            // For now, let's just log the values
+            console.log('Name: ' + name);
+            console.log('Email: ' + email);
+            alert('Booking submitted successfully!');
+            // You can reset the form here if needed
+        });
+    </script>
+</body>
+</html>
